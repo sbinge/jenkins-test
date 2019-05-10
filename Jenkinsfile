@@ -19,7 +19,7 @@ node('node') {
             println "-----"
             println "Current node name : " + Jenkins.getInstance().currentComputer().getName()
             println "Current host name : " + Jenkins.getInstance().currentComputer().getHostName()
-            println " Current node URL : " + Jenkins.getInstance().currentComputer()).getUrl()
+            println " Current node URL : " + Jenkins.getInstance().currentComputer().getUrl()
         }
     } catch (err) {
         currentBuild.result = "FAILURE"
