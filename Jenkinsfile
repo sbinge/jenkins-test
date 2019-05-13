@@ -9,6 +9,8 @@ node('node') {
         }
 
         stage('BuildDebug'){
+            echo sh(script: 'env|sort', returnStdout: true)
+            println "---------------------------"
             println "  (env) Build URL : ${env.BUILD_URL}"
             println " (env) Build node : ${env.NODE_NAME}"
             EC2_PUBLIC_HOSTNAME = sh (
